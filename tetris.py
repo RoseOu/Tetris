@@ -176,10 +176,15 @@ while True:
 	pos = ORIGIN_POS
 	level = levels[index]
 
+<<<<<<< HEAD
 	if not bump(board, block(pos,shape,state), pos):
 		#screen.blit(losetext, ((COLNUM) * LEN, ROWNUM * LEN/2))
 		pygame.time.delay(2000)
 		break
+=======
+	if not bump(board, block(pos,shape,state), pos): break
+	
+>>>>>>> f76c1e979554800ba03722e9ea949e3e0d0ba6ef
 	pygame.time.set_timer(KEYDOWN, level)
 	pygame.draw.line(screen, FONT_COLOR, ((COLNUM)*LEN,0), (COLNUM*LEN,ROWNUM*LEN))
 
