@@ -172,13 +172,11 @@ while True:
 	shape = random.choice((O,I,Z,L,S,J,T))
 	state = 0
 	pos = ORIGIN_POS
-	#index = 0
 	level = levels[index]
 
 	if not bump(board, block(pos,shape,state), pos): break
 	pygame.time.set_timer(KEYDOWN, level)
 	pygame.draw.line(screen, FONT_COLOR, ((COLNUM)*LEN,0), (COLNUM*LEN,ROWNUM*LEN))
-
 
 	while True:
 		draw(merge(board, block(pos,shape,state)), pos)
