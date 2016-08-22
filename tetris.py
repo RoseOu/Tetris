@@ -1,6 +1,5 @@
 # coding: utf-8
 import sys
-from random import choice
 import pygame
 from pygame.locals import *
 from sys import exit
@@ -180,7 +179,8 @@ while True:
 		#screen.blit(losetext, ((COLNUM) * LEN, ROWNUM * LEN/2))
 		pygame.time.delay(2000)
 		break
-	pygame.time.set_timer(KEYDOWN, levels)
+
+	pygame.time.set_timer(KEYDOWN, level)
 	pygame.draw.line(screen, FONT_COLOR, ((COLNUM)*LEN,0), (COLNUM*LEN,ROWNUM*LEN))
 
 	while True:
