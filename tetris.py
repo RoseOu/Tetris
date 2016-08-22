@@ -162,9 +162,11 @@ index = 0
 screen.fill(BG_COLOR)
 
 font = pygame.font.SysFont("arial", 28)
+losefont = pygame.font.SysFont("arial", 28)
 score = 0
 scores = 0
 text = font.render("Scroes:" + str(scores), True, FONT_COLOR)
+losetext = losefont.render("Game Over!", True, FONT_COLOR)
 screen.blit(text, ((COLNUM) * LEN, 0))
 
 
@@ -174,7 +176,10 @@ while True:
 	pos = ORIGIN_POS
 	level = levels[index]
 
-	if not bump(board, block(pos,shape,state), pos): break
+	if not bump(board, block(pos,shape,state), pos):
+		#screen.blit(losetext, ((COLNUM) * LEN, ROWNUM * LEN/2))
+		pygame.time.delay(2000)
+		break
 	pygame.time.set_timer(KEYDOWN, level)
 	pygame.draw.line(screen, FONT_COLOR, ((COLNUM)*LEN,0), (COLNUM*LEN,ROWNUM*LEN))
 
@@ -212,10 +217,10 @@ while True:
 	board,n = eliminate(board)
 	if n != 0:
 		draw(board)
-		score = 100*n
+		score = 100*n*n
 		scores = scores + score
-		index = index+(scores/500)
-		if index>=9:
+		index = scores/500
+		if index >= 9:
 			index = 9
 	
 	printcores(n,score,scores)
