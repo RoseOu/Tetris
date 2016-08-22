@@ -142,7 +142,7 @@ def eliminate(board):
 	return board,n
 
 def printcores(n,score,scores):
-	text = font.render("Scroes:" + str(scores), True, FONT_COLOR)
+	text = font.render("Scores:" + str(scores), True, FONT_COLOR)
 	screen.blit(text, ((COLNUM) * LEN, 0))
 
 pygame.init() 
@@ -164,8 +164,8 @@ font = pygame.font.SysFont("arial", 28)
 losefont = pygame.font.SysFont("arial", 28)
 score = 0
 scores = 0
-text = font.render("Scroes:" + str(scores), True, FONT_COLOR)
-losetext = losefont.render("Game Over!", True, FONT_COLOR)
+text = font.render("Scores:" + str(scores), True, FONT_COLOR)
+#losetext = losefont.render("Game Over!", True, FONT_COLOR)
 screen.blit(text, ((COLNUM) * LEN, 0))
 
 
