@@ -221,5 +221,3 @@ while True:
 			index = 9
 	
 	printcores(n,score,scores)
-
-
