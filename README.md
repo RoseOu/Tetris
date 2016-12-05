@@ -1,6 +1,11 @@
 # Tetris （俄罗斯方块）
-### 首先你要安装python和pygame
-### 然后就可以开始玩了..
+### Step 0: Install Python
 
-据说玩到6000分的都是高手..
+### Step 1: Install Pygame
+```
+$ pip install pygame
+```
+
+### Step 3: Play it! 
+
 <img src="tetris.png"/>
